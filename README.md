@@ -15,6 +15,7 @@ A test assignment project built with FastAPI. The service provides basic URL sho
 
 ```bash
 pip install -r requirements.txt
+```
 
 ## Running the Server
 
@@ -22,6 +23,7 @@ pip install -r requirements.txt
 
 ```bash
 uvicorn app.main:app --reload --host 127.0.0.1 --port 8080
+```
 
 ## Example Requests
 
@@ -36,6 +38,7 @@ Content-Type: application/json
 {
   "url": "https://example.com"
 }
+```
 
 **Response:**
 
@@ -43,6 +46,7 @@ Content-Type: application/json
 {
   "shorten_url": "http://127.0.0.1:8080/{shorten_id}"
 }
+```
 
 **Note: {shorten_id} will be a random string generated for each URL.**
 
@@ -52,6 +56,7 @@ Content-Type: application/json
 
 ```http
 GET /{shorten_id}
+```
 
 **Response:**
 
@@ -67,3 +72,4 @@ GET /{shorten_id}
 
 ```bash
 pytest
+```
